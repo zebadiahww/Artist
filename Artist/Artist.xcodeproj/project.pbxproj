@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852418652345193900074EBD /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852418642345193900074EBD /* ArtistModel.swift */; };
+		8524186823451C9400074EBD /* ArtistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8524186723451C9400074EBD /* ArtistController.swift */; };
 		85C9055E2345186F00C2EC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9055D2345186F00C2EC1D /* AppDelegate.swift */; };
 		85C905602345186F00C2EC1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9055F2345186F00C2EC1D /* SceneDelegate.swift */; };
 		85C905622345186F00C2EC1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C905612345186F00C2EC1D /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		852418642345193900074EBD /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
+		8524186723451C9400074EBD /* ArtistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistController.swift; sourceTree = "<group>"; };
 		85C9055A2345186F00C2EC1D /* Artist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C9055D2345186F00C2EC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85C9055F2345186F00C2EC1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +41,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		852418632345192200074EBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				852418642345193900074EBD /* ArtistModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8524186623451C8000074EBD /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				8524186723451C9400074EBD /* ArtistController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
 		85C905512345186F00C2EC1D = {
 			isa = PBXGroup;
 			children = (
+				8524186623451C8000074EBD /* ModelController */,
+				852418632345192200074EBD /* Model */,
 				85C9055C2345186F00C2EC1D /* Artist */,
 				85C9055B2345186F00C2EC1D /* Products */,
 			);
@@ -56,15 +78,23 @@
 		85C9055C2345186F00C2EC1D /* Artist */ = {
 			isa = PBXGroup;
 			children = (
-				85C9055D2345186F00C2EC1D /* AppDelegate.swift */,
-				85C9055F2345186F00C2EC1D /* SceneDelegate.swift */,
+				85C90571234518C200C2EC1D /* Resources */,
 				85C905612345186F00C2EC1D /* ViewController.swift */,
 				85C905632345186F00C2EC1D /* Main.storyboard */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		85C90571234518C200C2EC1D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				85C9055D2345186F00C2EC1D /* AppDelegate.swift */,
+				85C9055F2345186F00C2EC1D /* SceneDelegate.swift */,
 				85C905662345187000C2EC1D /* Assets.xcassets */,
 				85C905682345187000C2EC1D /* LaunchScreen.storyboard */,
 				85C9056B2345187000C2EC1D /* Info.plist */,
 			);
-			path = Artist;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852418652345193900074EBD /* ArtistModel.swift in Sources */,
 				85C905622345186F00C2EC1D /* ViewController.swift in Sources */,
 				85C9055E2345186F00C2EC1D /* AppDelegate.swift in Sources */,
+				8524186823451C9400074EBD /* ArtistController.swift in Sources */,
 				85C905602345186F00C2EC1D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQHR9QPNK6;
-				INFOPLIST_FILE = Artist/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Artist/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQHR9QPNK6;
-				INFOPLIST_FILE = Artist/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Artist/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
