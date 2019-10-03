@@ -8,28 +8,28 @@
 
 import Foundation
 
-struct Callback {
+struct callback: Codable {
     let message: Message
 }
-
-struct Message {
+struct Message: Codable {
     let body: Body
 }
 
-struct Body {
+struct Body: Codable {
     
     private enum CodingKeys: String, CodingKey{
         case artistList = "artist_list"
     }
     
-    let artistList: ArtistList
+    let artistList: [secondLevelDictionary]
 }
 
-struct ArtistList {
-    let artist: Artist
+
+struct secondLevelDictionary: Codable {
+    let artist: artist 
 }
 
-struct Artist {
+struct artist: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case artistID = "artist_id"
